@@ -57,14 +57,7 @@
                                         <a href="index.html" class="nav-item nav-link active">Home</a>
                                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                                         
-                                        <!-- <div class="nav-item dropdown">
-                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                            <div class="dropdown-menu">
-                                                <a href="#" class="dropdown-item">House Cleaning</a>
-                                                <a href="#" class="dropdown-item">Roof Cleaning</a>
-                                                <a href="#" class="dropdown-item">Deep Cleaning</a>
-                                            </div>
-                                        </div> -->
+                                        
                                         <a href="#" class="btn">Get A Quote</a>
                                     </div>
                                 </div>
@@ -81,10 +74,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Contact Us</h2>
+                            <h2><b>Contact Us</b></h2>
                         </div>
                         <div class="col-12">
-                            <a href="">Home</a>
+                            <a href="index.html">Home</a>
                             <a href="">Contact Us</a>
                         </div>
                     </div>
@@ -158,25 +151,61 @@
                         </div>
                         <div class="col-md-6">
                             <div class="contact-form">
-                                <form>
+                                <form method="post" id="ThementorcleanQuotes" action="https://script.google.com/macros/s/AKfycbx0orSDU3H_OUhRZiHTA0jgnsdBUpCwjRjNcH0xUFPjVQfgtOLr0eBU95tDrNIT4O2aGw/exec">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" placeholder="Your Name" required="required" />
+                                            <input type="text" name="name" class="form-control" placeholder="Your Name" required="required" />
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <input type="email" class="form-control" placeholder="Your Email" required="required" />
+                                            <input type="email" name="email" class="form-control" placeholder="Your Email" required="required" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" required="required" />
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject" required="required" />
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="6" placeholder="Message" required="required" ></textarea>
+                                        <textarea class="form-control" rows="6" name="message" placeholder="Message" required="required" ></textarea>
                                     </div>
-                                    <div><button class="btn" type="submit">Send Message</button></div>
+                                    <div><button class="btn" id="submitBtn" type="submit">Send Message</button></div>
                                 </form>
                             </div>
                         </div>
+                        <!-- ✅ JavaScript for smooth submission -->
+                        <script>
+                            document.getElementById("ThementorcleanQuotes").addEventListener("submit", function (e) {
+                              e.preventDefault(); // Prevent default reload
+                              const form = e.target;
+                              const submitBtn = document.getElementById("submitBtn");
+                          
+                              // Save original button text
+                              const originalText = submitBtn.innerHTML;
+                          
+                              // Disable button and show loader
+                              submitBtn.disabled = true;
+                              submitBtn.innerHTML = `<span class="spinner"></span> Submitting...`;
+                          
+                              fetch(form.action, {
+                                method: "POST",
+                                body: new FormData(form)
+                              })
+                              .then(response => response.text())
+                              .then(result => {
+                                submitBtn.innerHTML = "✅ Submitted";
+                                form.reset();
+                              })
+                              .catch(error => {
+                                submitBtn.innerHTML = "❌ Try Again";
+                                console.error("Error submitting form:", error);
+                              })
+                              .finally(() => {
+                                // Restore button after delay
+                                setTimeout(() => {
+                                  submitBtn.disabled = false;
+                                  submitBtn.innerHTML = originalText;
+                                }, 2000);
+                              });
+                            });
+                          </script>
                     </div>
                 </div>
             </div>
