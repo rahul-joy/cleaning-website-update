@@ -67,7 +67,7 @@
                                         <a href="index.html" class="nav-item nav-link active">Home</a>
                                         <a href="contact.html" class="nav-item nav-link">Contact</a>
   
-                                        <a href="#quota" class="btn">Get A Quote</a>
+                                        <a href="#quote" class="btn">Get A Quote</a>
                                     </div>
                                 </div>
                             </div>
@@ -79,10 +79,10 @@
                             <h2>Best & Trusted</h2>
                             <h2><span>Cleaning</span> Service</h2>
                             <p style="color: #FFD700;">Making Spaces Shine with Care You Can Trust.</p>
-                            <a class="btn" href="">Explore Now</a>
+                            <a class="btn" href="#start">Explore Now</a>
                         </div>
                         <div class="col-md-5">
-                            <div class="form">
+                            <div class="form" id="quote">
                               <h3>Get A Quote</h3>
                               <form method="post" id="ThementorcleanQuotes" action="https://script.google.com/macros/s/AKfycbwfvixbtVJZMJOCNRVVoB4YQaChPOPKUnbXIbv7esu4NlPvhGPQiXf6q_BpbPLO2c3cIA/exec">
                                 <input class="form-control" type="text" name="name" placeholder="Your Name" required>
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-6">
-                            <div class="about-text">
+                            <div id="start" class="about-text">
                                 <h2><span>10</span> Years Experience</h2>
                                 <p>
                                     For over 10 years, our Edmonton-based cleaning company has been the trusted choice for homeowners and businesses seeking exceptional cleaning services. As a fully 
@@ -192,10 +192,11 @@
                                 <h3>Window Cleaning</h3>
                                 <p>
                                     Streak-free clarity for every view – our professional window cleaning removes dirt, hard 
-water stains, and grime, enhancing natural light and curb appeal. Includes interior/exterior 
-panes, tracks, and screens.
+                                    water stains, and grime, enhancing natural light and curb appeal. Includes interior/exterior 
+                                    panes, tracks, and screens.
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <!-- <a class="btn" href="">Learn More</a> -->
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -205,7 +206,8 @@ panes, tracks, and screens.
                                 <p>
                                     Restore your property’s sparkle with our high-pressure cleaning for driveways, decks, siding, and patios. Eliminates mold, mildew, and years of built-up dirt without surface damage.
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <!-- <a class="btn" href="">Learn More</a> -->
+                                
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -215,7 +217,7 @@ panes, tracks, and screens.
                                 <p>
                                     Complete fall/spring cleanups: leaf removal, debris clearing, garden bed rejuvenation, and pre-winter prep. We handle the mess so you enjoy the seasons.
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <!-- <a class="btn" href="">Learn More</a> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
@@ -225,7 +227,8 @@ panes, tracks, and screens.
                                 <p>
                                 Prevent water damage with our thorough gutter clearing service. We remove leaves, nests, and blockages, ensuring proper drainage to protect your roof and foundation.
                                 </p>
-                                <a class="btn" href="">Learn More</a>
+                                <!-- <a class="btn" href="">Learn More</a> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -590,11 +593,12 @@ environment.
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <div class="form">
-                                <input class="form-control" placeholder="Email here">
-                                <button class="btn">Submit</button>
+                            <div class="form" id="emailForm">
+                              <input class="form-control" id="emailInput" placeholder="Email here" required>
+                              <button id="submitBtn" class="btn" type="submit">Submit</button>
                             </div>
-                        </div>
+                          </div>
+                          
                     </div>
                 </div>
             </div>
@@ -774,13 +778,7 @@ environment.
                                 <p><i class="fa fa-map-marker-alt"></i>10216 124 St NW, Edmonton, AB T5N 1P9</p>
                                 <p><i class="fa fa-phone-alt"></i>(780) 555-1234</p>
                                 <p><i class="fa fa-envelope"></i>mentorcleanproperty@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
@@ -832,7 +830,7 @@ environment.
                             <p>&copy; <a href="index.html">The Mentor Clean Property LTD.</a>, All Right Reserved.</p>
                         </div>
                         <div class="col-md-6">
-                            <p>Designed By <a href="#">Bibbian</a></p>
+                            <p>Designed By <a href="#">Bibbian Hamilton</a></p>
                         </div>
                     </div>
                 </div>

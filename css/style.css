@@ -63,6 +63,7 @@ a:focus {
     100% { transform: rotate(360deg); }
   }
 
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -564,6 +565,7 @@ a:focus {
 .service .col-lg-3,
 .service .col-md-6 {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .service .service-item {
@@ -578,7 +580,7 @@ a:focus {
     height: 100%; /* Ensures equal height for all items */
     text-align: center;
     width: 100%;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     /* padding: 20px 0 10px 0; */
     
 }
